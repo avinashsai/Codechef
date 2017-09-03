@@ -1,18 +1,32 @@
 #include<iostream>
-#define ll long long int 
+#include<string.h>
+#define ll long long int
 using namespace std;
 int main()
 {
-ll no,n,a,b,k;
+string a;
+bool flag;
+ll no,n,i;
 cin>>no;
 while(no--)
 {
-cin>>a>>b>>k;
-if(a%k==0)
-n=1;
+cin>>a;
+flag=0;
+n=a.length();
+for(i=2;i<n;i++)
+{
+if(a[i]==a[i-2]||a[i]==a[i-1])
+{
+flag=1;
+break;
+}}
+if(a[0]==a[1])
+flag=1;
+if(flag)
+cout<<"YES"<<endl;
 else
-n=0;
-cout<<n+(b/k)-(a/k)<<endl;
+cout<<"NO"<<endl;
 }
 return 0;
 }
+

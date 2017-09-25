@@ -1,2 +1,2 @@
 # algorithms
-codechef long challenge 
+codechef long challenge cook off lunch time and loc
